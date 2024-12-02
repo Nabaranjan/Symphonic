@@ -136,7 +136,7 @@ if st.button("🎤 **Generate Response**"):
 st.markdown(
     """
     <div class="footer">
-        Developed with ❤️ by <b>Aditya</b> | © 2024 **Symphonic** 🎶
+        Developed with ❤️ by <b>Aditya</b> | © 2024 Symphonic🎶
     </div>
     """,
     unsafe_allow_html=True,
