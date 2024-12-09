@@ -62,7 +62,7 @@ st.markdown("### 🎨 **Customize Your Response**")
 language = st.radio(
     "🌐 Select Language", 
     [
-        "Odia", "Hindi", "English", 
+       "Hindi", "Odia", "English", 
         "Bengali", "Tamil", "Telugu", "Marathi", "Kannada", "Gujarati", "Punjabi"
     ], 
     horizontal=True
