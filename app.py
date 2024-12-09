@@ -57,13 +57,40 @@ st.divider()
 
 # Layout Configuration
 st.markdown("### 🎨 **Customize Your Response**")
+
 # Language, Mode, Tone Selection
-language = st.radio("🌐 Select Language", ["Odia", "Hindi", "English"], horizontal=True)
-mode = st.selectbox("✍️ **Response Format**", ["Prose 🖋️", "Poetry 🎼", "Narrative 📖", "Philosophical 🧘‍♂️"])
+language = st.radio(
+    "🌐 Select Language", 
+    [
+        "Odia", "Hindi", "English", 
+        "Bengali", "Tamil", "Telugu", "Marathi", "Kannada", "Gujarati", "Punjabi"
+    ], 
+    horizontal=True
+)
+
+mode = st.selectbox(
+    "✍️ **Response Format**", 
+    ["Prose 🖋️", "Poetry 🎼", "Narrative 📖", "Philosophical 🧘‍♂️"]
+)
+
 tone = st.selectbox(
     "🎭 **Tone of Response**", 
-    ["Neutral 🤝", "Formal 🧑‍⚖️", "Casual 😊", "Passionate ❤️", "Contemplative 🤔", "Humorous 😄"]
+    [
+        "Neutral 🤝 (निष्पक्ष)", 
+        "Formal 🧑‍⚖️ (औपचारिक)", 
+        "Casual 😊 (अनौपचारिक)", 
+        "Passionate ❤️ (जोशीला)", 
+        "Contemplative 🤔 (विचारशील)", 
+        "Humorous 😄 (हास्य)", 
+        "Romantic 💕 (रोमांटिक)", 
+        "Inspirational 🌟 (प्रेरणादायक)", 
+        "Optimistic 🌞 (आशावादी)", 
+        "Serene 🌿 (शांत)", 
+        "Excited 😆 (उत्साहित)", 
+        "Melancholic 😔 (उदास)"
+    ]
 )
+
 
 # User Input Query
 st.markdown("### 🔍 **Enter Your Query**")
