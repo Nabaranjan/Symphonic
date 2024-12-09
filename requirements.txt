@@ -2,3 +2,5 @@ streamlit
 requests
 google-generativeai
 langchain
+gtts
+regex
