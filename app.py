@@ -23,8 +23,8 @@ load_css("Ui/Style.css")
 
 # Remove special characters and improve formatting
 def clean_text(text):
-    # Retain only alphabetic characters, numbers, punctuation, and spaces
-    clean_text = re.sub(r'[^a-zA-Z0-9.,!?;:()\'\" \n]', '', text)
+    # Retain alphabetic characters (both English and Hindi), numbers, punctuation, and spaces
+    clean_text = re.sub(r'[^a-zA-Z0-9.,!?;:()\'\" \n\u0900-\u097F]', '', text)
     return re.sub(r'\s+', ' ', clean_text).strip()
 
 
