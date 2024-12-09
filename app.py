@@ -101,7 +101,7 @@ if st.button("🎤 **Generate Response**"):
             if clean_response and clean_response.strip():
                 try:
                     # Proceed with text-to-speech if the cleaned response is valid
-                    tts = gTTS(clean_response)
+                    tts = gTTS(clean_response, lang='en', tld='co.in')
                     audio_file = BytesIO()
                     tts.write_to_fp(audio_file)
                     st.audio(audio_file, format='audio/mp3')
