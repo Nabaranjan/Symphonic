@@ -93,15 +93,27 @@ if st.button("🎤 **Generate Response**"):
             st.success("### 🎶 **Your Symphonic Creation**:")
             st.markdown(f"**{mode} in {language} ({tone}):**")
             st.write(response)
+
+            # Clean the response text
             clean_response = clean_text(response)
-            tts = gTTS(clean_response)
-            audio_file = BytesIO()
-            tts.write_to_fp(audio_file)
-            st.audio(audio_file, format='audio/mp3')
+
+            # Check if the cleaned response is valid (non-empty and not just whitespace)
+            if clean_response and clean_response.strip():
+                try:
+                    # Proceed with text-to-speech if the cleaned response is valid
+                    tts = gTTS(clean_response)
+                    audio_file = BytesIO()
+                    tts.write_to_fp(audio_file)
+                    st.audio(audio_file, format='audio/mp3')
+                except Exception as e:
+                    st.error(f"⚠️ Error generating audio: {e}")
+            else:
+                st.error("⚠️ No valid text to convert to speech.")
         else:
             st.error("⚠️ No response received. Please try again later.")
     else:
         st.warning("⚠️ Please enter a query or select a famous work.")
+
 
 # Footer Section
 st.markdown(
