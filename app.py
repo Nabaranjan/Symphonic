@@ -98,8 +98,8 @@ query = st.text_input("💡 Type your topic, theme, or idea (e.g., 'love', 'natu
 
 
 # Generate Response Button
-st.markdown("<div class='divider'></div>", unsafe_allow_html=True)
 if st.button("🎤 **Generate Response**"):
+    st.markdown("<div class='divider'></div>", unsafe_allow_html=True)
     if query:
         with st.spinner("🎶 Composing your literary masterpiece..."):
             # Generate the prompt
