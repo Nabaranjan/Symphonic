@@ -7,7 +7,7 @@ from io import BytesIO
 
 # App Configuration
 st.set_page_config(
-    page_title="Symphonic: Literature & Poetry Hub",
+    page_title="Rasulgarh premika: Literature & Poetry Hub",
     page_icon="🎶",
     layout="wide"  # Centered layout for a more professional feel
 )
